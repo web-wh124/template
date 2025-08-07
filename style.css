@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* ふわっと表示するアニメーション */
+.js-fadeIn {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s, transform .6s;
+}
+
+.js-fadeIn.is-show {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .3s;
+}
+
+/*
+header
+****************************************************/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding-inline: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #c29e9e;
+}
+
+.header__logo {
+    width: 120px;
+    height: 80px;
+    background-color: #d2a0a0;
+}
+
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__nav-link {
+    color: #fff;
+    font-size: 0.9375rem;
+    transition: .3s;
+}
+
+.header__nav-link:hover {
+    opacity: 0.7;
+}
+
+.header__contact-btn {
+    font-size: 1rem;
+    color: #333;
+    border-radius: 9999px;
+    background-color: #fff;
+    padding: 10px;
+    transition: .3s;
+}
+
+.header__contact-btn:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+/*
+hero
+****************************************************/
+.hero {
+    width: 100%;
+    height: 80vh;
+    background-color: #807b7b;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    margin-top: 80px;
+}
+
+.hero__title {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero__sub-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hero__list-item {
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero__text {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 36px;
+}
+
+.hero__link {
+    font-size: 1.125rem;
+    color: #333;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    margin-top: 24px;
+    transition: .3s;
+}
+
+.hero__link:hover {
+    opacity: 0.7;
+}
+
+/*
+pain-point
+****************************************************/
+.pain-point {
+    margin: 150px 0;
+    text-align: center;
+}
+
+.pain-point__inner {
+    max-width: 1110px;
+    width: calc(100% - 40px);
+    margin-inline: auto;
+}
+
+.pain-point__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.pain-point__list-item {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #f3f3f3;
+}
+
+.pain-point__number {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pain-point__list-wrapper::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 50px;
+    background-color: #f3f3f3;
+    margin-inline: auto;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.pain-point__text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.pain-point__link {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 10px 45px;
+    margin-top: 35px;
+    background-color: #4b4949;
+    position: relative;
+    border-radius: 9999px;
+    transition: .3s;
+}
+
+.pain-point__link:hover {
+    opacity: 0.7;
+}
+
+.pain-point__link-circle-wrapper {
+    position: absolute;
+    top: 50%;
+    right: -55px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b4949;
+    border-radius: 50%;
+    width: 90px;
+    aspect-ratio: 1;
+}
+
+.pain-point__link-circle {
+    font-size: 1.125rem;
+}
+
+.text-large {
+    font-size: 2rem;
+}
